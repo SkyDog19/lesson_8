@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/null.css">
+    <link rel="stylesheet" href="css/style_2.css">
+    <title>Псевдоклассы и псевдоэлементы</title>
+</head>
+
+<body>
+    <div class="wreaper">
+        <header class="header">
+            <h1>Псевдоклассы и псевдоэлементы</h1>
+            <div class="description">
+                <p class="text-description"> В данном уроке мы изучим что такое псевдоклассы и псевдоэлменты!</p>
+                <div class="image-one">
+                    <img width="600" src="image/psevdo.png" alt="Здесь список псевдоклассов и псевдоэлементов">
+                </div>
+                <ul class="menu">
+                    <li>Псевдоклассы:
+                        <ul class="menunub">
+                            <li><a class="link-menu" href="#section-1">:hover</a></li>
+                            <li><a class="link-menu" href="#section-2">:active</a></li>
+                            <li><a class="link-menu" href="#section-3">:visited</a></li>
+                            <li><a class="link-menu" href="#section-4">:target</a></li>
+                            <li><a class="link-menu" href="#section-5">:child и :type</a></li>
+                            <li><a class="link-menu" href="#section-6">not(n)</a></li>
+                            <li><a class="link-menu" href="#section-7">:focus</a></li>
+                        </ul>
+                    </li>
+                    <li>Псевдоэлементы:
+                        <ul class="menunub">
+                            <li><a class="link-menu" href="#section-8">::first-letter</a></li>
+                            <li><a class="link-menu" href="#section-9">::first-line</a></li>
+                            <li><a class="link-menu" href="#section-10">::before и ::After</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </header>
+        <main class="main">
+            <div class="block-one">
+                <h2>Псевдоклассы</h2>
+                <p class="text-description">
+                    Псевдокласс в CSS — это ключевое слово, добавленное к селектору, которое определяет его особое
+                    состояние.
+                </p>
+            </div>
+            <div class="block-two">
+                <h3 id="section-1">:hover</h3>
+                <p class="text-block">
+                    Я псевдокласс :hover и работаю лишь тогда, когда на меня наводят курсор мыши - в остальное время
+                    предпочитаю чилить!
+                </p>
+                <div class="text-hover">
+                    <p>Наведи на меня мышью и увидишь меня в действии!</p>
+                </div>
+            </div>
+            <div class="block-three">
+                <h3 id="section-2">:active</h3>
+                <p class="text-block">
+                    Я псевдокласс :active, ещё более ленивый, чем :hover. Предпочитаю работать тогда, когда на меня
+                    кликают мышью! Если на меня не кликнуть, работать я не буду!
+                </p>
+                <div class="text-active">
+                    <a class="link-active" href="#">Хоть я и ссылка, но никуда не веду! Наведи на меня курсор и зажми
+                        левую кнопку
+                        мыши!</a>
+                </div>
+                <p class="text-block">
+                    На первый взгляд :active не кажется active, но не стоит недооценивать данный псевдокласс, ведь он
+                    делает наш сайт более живым и веселым!
+                </p>
+            </div>
+            <div class="block-fo">
+                <h3 id="section-3">:visited</h3>
+                <p class="text-block">
+                    Я псевдокласс visited и работаю не так часто, как мои собратья!
+                </p>
+                <div class="text-visited">
+                    <a target="_blank" class="link-visited"
+                        href="https://www.youtube.com/watch?v=V5PhGBjE4bg&ab_channel=Beautifulyogaandgymnastics">Ты
+                        оценишь мою работу только при возвращении назад, кликнув по этой ссылке!</a>
+                </div>
+                <p class="text-block">Как видишь, я изменил свой цвет, и теперь тебе удобнее ориентироваться!</p>
+            </div>
+            <div id="sect" class="block-five">
+                <h3 id="section-4">:target</h3>
+                <p class="text-block">
+                    Я срабатываю, когда являюсь объектом, на который ссылаются. Звучит сложно? Сейчас покажу, как я
+                    работаю!
+                </p>
+                <div class="text-target">
+                    <a href="#hello" class="link-target">Нажми на меня и всё увидишь!</a>
+                </div>
+                <div id="hello" class="text-hello">
+                    <p>Вот я и появился! Ты нажал на ссылку, которая при помощи псевдокласса ссылается на блок, а
+                        свойство display помогает ему вернуться в строй!</p>
+                </div>
+                <div class="text-hellotwo">
+                    <a href="#sect">А теперь можешь снова убрать меня, если мешаю :(</a>
+                </div>
+            </div>
+            <div class="block-six">
+                <h3 id="section-5">:child и :of-type</h3>
+                <p class="text-block">Псевдоклассы для обращения к конкретным элементами. Чаще всего применяются к
+                    спискам.</p>
+                <ol class="list-ol">
+
+                    <li>:first-child - обращение к первому элементу.</li>
+                    <li>:nth-child(n) - обращение к элементу, который будет указан вместо (n) в цифровом значении.</li>
+                    <li>:last-child - обращение к последнему элементу.</li>
+                </ol>
+                <p class="text-block">
+                    Отличие child от of-type в том, что of-type обращается к конкретному тегу или классу вне зависимости
+                    от того, что стоит перед ним. Если же перед child поставить другой тег, когда, например, обращение к
+                    первому элементу - конструкция рухнет.
+                </p>
+            </div>
+            <div class="block-seven">
+                <h3 id="section-6">not(n)</h3>
+                <p class="text-block">
+                    Я исключаю применение свойств к элементу, указанному в скобках.
+                <ol class="list-ol-two">
+
+                    <li>У меня есть галочка!</li>
+                    <li>У меня тоже есть!</li>
+                    <li>А у меня нет :(</li>
+                </ol>
+                </p>
+                <p class="text-block">
+                    Таким образом я могу отменить свойства к любому элементу списка, при этом остальные останутся
+                    стилизованными.
+                </p>
+            </div>
+            <div class="block-eight">
+                <h3 id="section-7">:focus</h3>
+                <p class="text-block">
+                    Я срабатываю при получении фокуса. Работаю только с интерактивными объектами! Например - ссылки.
+                </p>
+                <div class="text-focus">
+                    <a href="#" class="link-focus">Щёлкни по мне мышкой, и ты увидишь необычное выделение!</a>
+                </div>
+                <p class="text-block">Заметил, что я отличаюсь от других интерактивных объектов? Это всё :focus!</p>
+            </div>
+            <div class="block-nine">
+                <h2 class="psevdoel">Псевдоэлементы</h2>
+                <p class="text-description">
+                    Псевдоэлемент в CSS — это ключевое слово, добавляемое к селектору, которое позволяет стилизовать
+                    определённую часть выбранного элемента.
+                </p>
+            </div>
+            <div class="block-ten">
+                <h4 id="section-8">::first-letter</h4>
+                <p class="text-block">Я стилзую первую букву текста. Благодоря мне можно сделать красивый дизайн первой
+                    буквы, преукрасив вид и воприятие параграфа! </p>
+                <div class="text-letterone">
+                    <p>Разве не круто??</p>
+                </div>
+            </div>
+            <div class="block-eleven">
+                <h4 id="section-9">::first-line</h4>
+                <p class="text-block">
+                    Я стилизую первую строчку кода вне зависимости от количества текста. То есть если изменится ширина
+                    блока и с ним количество слов в первой строке - я тилизую только то, что останется в первой строке.
+                </p>
+                <div class="text-lineone">
+                    <p>
+                        Я был бы рад искать ответы, <br>
+                        На все вопросы, что храню, <br>
+                        Мне бы сверстать эти макеты, <br>
+                        Чтобы хоть раз поспать на дню
+                    </p>
+                </div>
+            </div>
+            <div class="block-twelve">
+                <h4 id="section-10">::before и ::After</h4>
+                <p class="text-block">
+                    Я одно из самых крутых свойств! Могу добавлять контент до и после содержимого. Зачем? Затем, что в
+                    дальнейшем меня можно круто стилизовать!
+                </p>
+                <div class="befaft">
+                    <p>Гифка, что стоит в начале, находится здесь благодоря псевдоэлементу ::before, а круг, что стоит в
+                        конце, нарисовался при помощи ::after</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Сегодня мы познакомились с псевдоклассами и псевдоэлементами! Эти знания необходимы каждому верстальщику
+                для надежной и красивой вёрстки. Всем удачи и помни: живи, а работай в свободное время!</p>
+            <p>Автор:skydog19</p>
+        </footer>
+    </div>
+</body>
+
+</html>
